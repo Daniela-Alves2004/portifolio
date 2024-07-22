@@ -1,7 +1,60 @@
+@use "../../styles/variables.scss" as *;
+
 .conteiner{
-    background-color: yellow;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    background: rgb(169,126,246);
+    background: linear-gradient(180deg, rgba(169,126,246,1) 41%, rgba(176,151,221,1) 69%);
+    font-weight: bold;  
+    font-family: $font;
+    justify-content: center;
+    align-items: center;
+    gap: 46px ;
+
 }
+.conteinerDescription{
+    width: 558px;
+    height: 653px;
+}
+.TextAbout h1{
+    font-size: 96px;
+    color: $primary;
+}
+.TextAbout p{
+    
+    font-size: 16px;
+
+
+}
+.TextAbout span{
+    color: $primary;
+} 
 .photo img{
-    width: 300px;
-    height: 200px;
+    width: 550px;
+    height: 607px;
+}
+.contact{
+    display: flex;
+    margin-top: 50px;
+    gap: 13px;
+}
+.contact a {
+    width: 160px;
+    height: 54px;
+    border: 1px solid $primary;
+    background-color: transparent;
+    font-size: 13px ;   
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: $primary;
+}
+.contact a:hover{
+    width: 180px;
+    height: 60px;
+    ;
 }
