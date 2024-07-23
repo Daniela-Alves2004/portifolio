@@ -1,0 +1,70 @@
+@use "../../styles/variables.scss" as *;
+
+.container{
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(176,151,221);
+    background: linear-gradient(180deg, rgba(176,151,221,1) 50%, rgba(150,107,225,1) 100%);
+    font-family: $font;
+    
+}
+.container h1{
+    font-size: 128px;
+    color:$background;
+}
+.articleIC{
+    display: flex;
+    
+}
+.articleText{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding-left: 30px;
+}
+.articleText h2{
+    font-size: 32px;
+    color: $primary;
+}
+.articleText p{
+    font-size: 13px;
+}
+.articleText a{
+    width: 242px;
+    height: 67px;
+    border: 1px solid $primary;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 18px;
+    margin-top: 24px;
+}
+.articleText a:hover{
+    background-color: $accent;
+    width: 242px;
+    height: 77px; 
+}
+.articleMD{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top:82px ;
+
+}
+.loading{
+    width: 300px;
+    height: 350px;
+    
+}
+.teste, .teste1{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
