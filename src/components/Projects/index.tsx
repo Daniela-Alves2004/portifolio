@@ -9,6 +9,7 @@ import data from "./data";
           title={data.title}
           description={data.description}
           url={data.url}
+          tech={data.tech}
         />
       ))
 
