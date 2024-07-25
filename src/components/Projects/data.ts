@@ -4,10 +4,7 @@ const data = [
       title: 'Projeto Sr. Dente',
       description: 'The Sr. Dente page is a volunteer project developed for Pipoca Ágil, aimed at educating and informing families about the importance of oral health. We offer accessible and educational content to encourage dental hygiene practices and preventive care. The project guides children s tooth transitions, addresses adult oral health, and reinforces the importance of brushing, flossing, and cavity prevention, always in a fun and family-oriented way.',
       url: 'https://sr-dente.vercel.app',
-      tech: {
-        src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png',
-        alt: 'React'
-    },
+     
     },
     {
       id: 2,
@@ -32,7 +29,7 @@ const data = [
       title:'To do list',
       description:'This project is a task list with features that allow adding descriptions, dates, and task types. It is possible to add new tasks, clear all tasks or just a specific one, and mark tasks as completed.',
       url: 'https://daniela-alves2004.github.io/lista-de-tarefas/',
-      img:'../assets/technologic/react.png'
+      
     },
   ];
   

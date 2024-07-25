@@ -1,18 +1,13 @@
 
+import Teste from '../Teste';
 import style from './CardProject.module.scss';
-
-interface Image {
-  src: string;
-  alt: string;
-}
 
 interface CardProjectProps {
   title: string;
   description: string;
   url: string;
-  tech?: Image;
 }
-export const CardProject = ( {title,description, url,tech }: CardProjectProps) => {
+export const CardProject = ( {title,description, url }: CardProjectProps) => {
     return (
     <div className={style.cardProject}>
       <div className={style.screenWebsite}>
@@ -23,8 +18,6 @@ export const CardProject = ( {title,description, url,tech }: CardProjectProps) =
         <p>{description}</p>
       </div>
       <div className={style.technologics}>
-        <p>The technologies used were:</p>
-        <p>{JSON.stringify(tech)}</p>
       </div>
       
     </div>
