@@ -1,5 +1,5 @@
 import Tec from "../Tech";
-
+import html from "../../assets/technologic/html.png"
 
 const TechMD = () => {
     return(
@@ -8,7 +8,7 @@ const TechMD = () => {
         <Tec
             className="html"    
             label="html"
-            image="src\assets\technologic\html.png"
+            image={html}
             />
             <Tec 
             className="css"
