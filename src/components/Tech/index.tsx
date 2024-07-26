@@ -6,7 +6,8 @@ interface TechProps {
 const Tech = ({className,label,image}:TechProps) => {
     return (
         <div className={className}>
-            <p>{label} <img src={image} /> </p> 
+            <img className='logo' src={image} />
+            <p>{label} </p> 
         </div>
     );
 };

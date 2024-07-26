@@ -6,8 +6,8 @@ function Footer() {
     return(
         <footer className={style.footer}>
             <div className={style.icons} >
-                <img src={github} alt="" />
-                <img src={linkedin} alt="" />
+                <a target="__black" href="https://github.com/Daniela-Alves2004"><img src={github} alt="" /></a>
+                <a target="__black" href="https://www.linkedin.com/in/daniela-dos-santos-alves/"> <img src={linkedin} alt="" /></a>
             </div>
             <p>Desenvolvido por Daniela Alves.</p>
             <p>2024 | Daniela Alves</p>
