@@ -1,4 +1,7 @@
 import Tec from "../Tech";
+import React from "../../assets/technologic/react.png";
+import TypeScript from "../../assets/technologic/typeScript.png";
+import Sass from "../../assets/technologic/scss.png";
 
 
 const TechPA = () => {
@@ -8,17 +11,17 @@ const TechPA = () => {
         <Tec
             className="React"    
             label="React"
-            image="src\assets\technologic\react.png"
+            image={React}
             />
             <Tec 
             className="TypeScript"
             label="TypeScript"
-            image="src\assets\technologic\typeScript.png"
+            image={TypeScript}
             />
             <Tec
             className="sass"
             label="sass"
-            image="src\assets\technologic\scss.png"
+            image={Sass}
             />
       </>
 

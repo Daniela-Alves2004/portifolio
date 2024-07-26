@@ -1,6 +1,7 @@
 import Tec from "../Tech";
-import html from "../../assets/technologic/html.png"
-
+import html from "../../assets/technologic/html.png";
+import css from "../../assets/technologic/css.png";
+import js from "../../assets/technologic/js.png";
 const TechMD = () => {
     return(
         <>
@@ -13,12 +14,12 @@ const TechMD = () => {
             <Tec 
             className="css"
             label="css"
-            image="src\assets\technologic\css.png"
+            image={css}
             />
             <Tec
             className="js"
             label="js"
-            image="src\assets\technologic\js.png"
+            image={js}
             />
       </>
 
