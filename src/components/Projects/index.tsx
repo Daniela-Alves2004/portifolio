@@ -8,7 +8,9 @@ import data from "./data";
           id={data.id}
           title={data.title}
           description={data.description}
-          url={data.url}
+          urlSite={data.urlSite}
+          linkRep={data.linkRep}
+          
         />
       ))
 
