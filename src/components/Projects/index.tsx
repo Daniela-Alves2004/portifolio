@@ -5,7 +5,7 @@ import data from "./data";
   return(
       data.map(data => (
         <CardProject
-          key={data.id}
+          id={data.id}
           title={data.title}
           description={data.description}
           url={data.url}
