@@ -1,4 +1,3 @@
-
 //import Teste from '../Teste';
 import TechPA from '../TechPA';
 import TechMD from '../TechMD';
@@ -6,19 +5,24 @@ import style from './CardProject.module.scss';
 import vite from "../../assets/technologic/vite.png"
 import github from "../../assets/github1.png";
 import web from "../../assets/web.png";
+
 interface CardProjectProps {
   id: number;
   title: string;
   description: string;
   urlSite: string;
   linkRep: string;
+  foto: string;
+  alt: string;
 }
-export const CardProject = ({ id, title, description, urlSite, linkRep }: CardProjectProps) => {
+
+export const CardProject = ({ id, title, description, urlSite, linkRep, foto, alt }: CardProjectProps) => {
+  const isEven = id % 2 === 0; 
+
   return (
-    
-    <div className={style.cardProject}>
+    <div className={`${style.cardProject} ${isEven ? style.reverse : ''}`} >
       <div className={style.screenWebsite}>
-        <iframe src={urlSite}></iframe>
+        <img src={foto} alt={alt} />
       </div>
 
       <div className={style.textProjects}>
@@ -26,7 +30,6 @@ export const CardProject = ({ id, title, description, urlSite, linkRep }: CardPr
         <p>{description}</p>
         <p>The technologies used were:</p>
         <div className={style.technologics}>
-          
           {id === 1 && <TechPA />}
           {id === 2 && (
             <>
@@ -41,22 +44,17 @@ export const CardProject = ({ id, title, description, urlSite, linkRep }: CardPr
           <a target="_blank" href={linkRep}>
             <button className={style.buttonGitHub}>
               <p>GitHub</p>
-              <img src={github} />
-              
+              <img src={github} alt="GitHub logo" />
             </button>
-
           </a>
           <a target="_blank" href={urlSite}>
             <button className={style.buttonWeb}>
-              <p> Access the website</p>
-              <img src={web} />
+              <p>Access the website</p>
+              <img src={web} alt="Website logo" />
             </button>
-
           </a>
         </div>
       </div>
     </div>
-    
   );
 };
-

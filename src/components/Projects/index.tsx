@@ -10,7 +10,8 @@ import data from "./data";
           description={data.description}
           urlSite={data.urlSite}
           linkRep={data.linkRep}
-          
+          foto={data.foto}
+          alt={data.alt}
         />
       ))
 

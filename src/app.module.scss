@@ -1,0 +1,10 @@
+@use "./styles/variables" as *;
+
+.titleProjects{
+    color: $primary;
+    font-size: 96px;
+    font-weight: bold;
+    font-family: $font;
+    text-align: center;
+    margin-top: 87px;
+}

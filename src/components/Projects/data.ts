@@ -1,3 +1,9 @@
+import srDenteImage from "../../assets/mockups/srDente.png";
+import lpSquadImage from '../../assets/mockups/lpSquad.png';
+import meninasDigitaisImage from '../../assets/mockups/MD.png';
+import marioImage from '../../assets/mockups/mario.png';
+import toDoImage from '../../assets/mockups/toDo.png';
+
 const data = [
     {
       id: 1,
@@ -6,7 +12,9 @@ const data = [
       urlSite: 'https://sr-dente.vercel.app',
       linkRep:'https://github.com/luscabap/sr-dente.git',
       textgithub:'GitHub',
-      textSite:'Access the website'
+      textSite:'Access the website',
+      foto:srDenteImage,
+      alt:"mockup sr Dente"
     },
     {
       id: 2,
@@ -15,7 +23,9 @@ const data = [
       urlSite: 'https://pipoca-agil-apresentacao.vercel.app',
       linkRep:'https://pipoca-agil-apresentacao.vercel.app',
       textgithub:'GitHub',
-      textSite:'Access the website'
+      textSite:'Access the website',
+      foto:lpSquadImage,
+      alt:"mockup landing page squad"
     },
     {
         id:3,
@@ -24,7 +34,9 @@ const data = [
         urlSite: 'https://daniela-alves2004.github.io/projeto-web-front-end/',
         linkRep:'https://github.com/Daniela-Alves2004/projeto-web-front-end.git',
         textgithub:'GitHub',
-        textSite:'Access the website'
+        textSite:'Access the website',
+        foto:meninasDigitaisImage,
+        alt:"mockup Meninas Digitais"
     },
     {
         id:4,
@@ -33,7 +45,9 @@ const data = [
         urlSite: 'https://daniela-alves2004.github.io/Jogo-Mario/',
         linkRep:'https://github.com/luscabap/sr-dente.git',
         textgithub:'GitHub',
-        textSite:'Access the website'
+        textSite:'Access the website',
+        foto:marioImage,
+        alt:"mockup mario Game"
     },
     {
       id:5,
@@ -42,7 +56,9 @@ const data = [
       urlSite: 'https://daniela-alves2004.github.io/lista-de-tarefas/',
       linkRep:'hhttps://github.com/Daniela-Alves2004/lista-de-tarefas.git',
       textgithub:'GitHub',
-      textSite:'Access the website'
+      textSite:'Access the website',
+      foto:toDoImage,
+      alt:"mockup to do list"
     },
   ];
   

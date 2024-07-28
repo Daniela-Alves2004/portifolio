@@ -1,5 +1,6 @@
 @use "../../styles/variables" as *;
 
+
 .cardProject{
     display: flex;
     justify-content: center;
@@ -9,15 +10,36 @@
     height: 1080px;
     gap: 100px;
     font-family: $font;
+    background-color: $background;
 }
+.cardProject {
+    display: flex;
+    flex-direction: row;
+   
+  
+    .screenWebsite {
+      flex: 1;
+    }
+  
+    .textProjects {
+      flex: 1;
+      
+    }
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+    background-color: $secondary;
+  }
+  
 
 .screenWebsite iframe{
-    height: 700px;
-    width: 600px;
+    height: 595px;
+    width: 571px;
 }
 .textProjects{
     width: 600px;
-    height: 700px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     font-weight: bold;

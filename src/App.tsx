@@ -13,6 +13,7 @@ function App() {
      <Header/>
      <Apresentation/>
      <About />  
+     <h1 className={styles.titleProjects}>My Projects</h1>
      <Projects/>
      <Articles/>
      <Footer/>

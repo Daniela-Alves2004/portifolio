@@ -1,6 +1,6 @@
 import style from "./Articles.module.scss";
-import loading from "../../assets/loading.png";
 import iconArticle from "../../assets/article.png";
+import article from "../../assets/application.png";
 
 function Articles() {
     return (
@@ -10,7 +10,7 @@ function Articles() {
             <div className={style.articleIC}>
                 <div className={style.teste}>
 
-                <img className={style.loading} src={loading} />
+                <img className={style.loading} src={article} />
                 </div>
 
 
@@ -36,7 +36,7 @@ function Articles() {
             <div className={style.articleMD}>
                 <div className={style.teste1}>
 
-                    <img className={style.loading} src={loading} />
+                    <img className={style.loading} src={article} />
                 </div>
                 <div className={style.articleText}>
                     <h2>
