@@ -1,22 +1,14 @@
 @use "../../styles/variables" as *;
 
-
-.cardProject{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 1080px;
-    gap: 100px;
-    font-family: $font;
-    background-color: $background;
-}
 .cardProject {
     display: flex;
     flex-direction: row;
-   
-  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: $font;
+    background-color: $background;
+    padding-left: 150px;
     .screenWebsite {
       flex: 1;
     }
@@ -33,13 +25,8 @@
   }
   
 
-.screenWebsite iframe{
-    height: 595px;
-    width: 571px;
-}
 .textProjects{
-    width: 600px;
-    height: 600px;
+   
     display: flex;
     flex-direction: column;
     font-weight: bold;
@@ -50,11 +37,12 @@
 .textProjects p{
     color: $text;
     margin-top: 30px;
-    
+    width: 400px;
 }
 .technologics{
     display: flex;
-    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
 }
 .btLinks {
     gap: 30px;

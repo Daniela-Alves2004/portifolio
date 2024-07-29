@@ -3,6 +3,13 @@ import lpSquadImage from '../../assets/mockups/lpSquad.png';
 import meninasDigitaisImage from '../../assets/mockups/MD.png';
 import marioImage from '../../assets/mockups/mario.png';
 import toDoImage from '../../assets/mockups/toDo.png';
+import css from "../../assets/technologic/css.png";
+import html from "../../assets/technologic/html.png";
+import js from "../../assets/technologic/js.png";
+import typeScript from "../../assets/technologic/typeScript.png";
+import react from "../../assets/technologic/react.png";
+import vite from "../../assets/technologic/vite.png";
+import scss from "../../assets/technologic/scss.png";
 
 const data = [
     {
@@ -14,7 +21,13 @@ const data = [
       textgithub:'GitHub',
       textSite:'Access the website',
       foto:srDenteImage,
-      alt:"mockup sr Dente"
+      alt:"mockup sr Dente",
+      technology: [
+        { logo: react, desclogo: "React" },
+        { logo: typeScript, desclogo: "TypeScript" },
+        { logo: scss, desclogo: "Scss" },
+      
+      ]
     },
     {
       id: 2,
@@ -25,7 +38,14 @@ const data = [
       textgithub:'GitHub',
       textSite:'Access the website',
       foto:lpSquadImage,
-      alt:"mockup landing page squad"
+      alt:"mockup landing page squad",
+      technology: [
+        { logo: react, desclogo: "React" },
+        { logo: typeScript, desclogo: "TypeScript" },
+        { logo: scss, desclogo: "Scss" },
+        { logo: vite, desclogo: "Vite" },
+      
+      ]
     },
     {
         id:3,
@@ -36,7 +56,13 @@ const data = [
         textgithub:'GitHub',
         textSite:'Access the website',
         foto:meninasDigitaisImage,
-        alt:"mockup Meninas Digitais"
+        alt:"mockup Meninas Digitais",
+        technology: [
+          { logo: html, desclogo: "HTML" },
+          { logo: css, desclogo: "CSS" },
+          { logo: js, desclogo: "JavaScript" },
+        
+        ]
     },
     {
         id:4,
@@ -47,7 +73,13 @@ const data = [
         textgithub:'GitHub',
         textSite:'Access the website',
         foto:marioImage,
-        alt:"mockup mario Game"
+        alt:"mockup mario Game",
+        technology: [
+          { logo: html, desclogo: "HTML" },
+          { logo: css, desclogo: "CSS" },
+          { logo: js, desclogo: "JavaScript" },
+        
+        ]
     },
     {
       id:5,
@@ -58,7 +90,13 @@ const data = [
       textgithub:'GitHub',
       textSite:'Access the website',
       foto:toDoImage,
-      alt:"mockup to do list"
+      alt:"mockup to do list",
+      technology: [
+        { logo: html, desclogo: "HTML" },
+        { logo: css, desclogo: "CSS" },
+        { logo: js, desclogo: "JavaScript" },
+      
+      ]
     },
   ];
   

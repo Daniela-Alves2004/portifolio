@@ -12,6 +12,7 @@ import data from "./data";
           linkRep={data.linkRep}
           foto={data.foto}
           alt={data.alt}
+          technology={data.technology}
         />
       ))
 

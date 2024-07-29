@@ -14,9 +14,10 @@ interface CardProjectProps {
   linkRep: string;
   foto: string;
   alt: string;
+  technology: { logo: string; desclogo: string }[];
 }
 
-export const CardProject = ({ id, title, description, urlSite, linkRep, foto, alt }: CardProjectProps) => {
+export const CardProject = ({ id, title, description, urlSite, linkRep, foto, alt,technology}: CardProjectProps) => {
   const isEven = id % 2 === 0; 
 
   return (
@@ -29,16 +30,13 @@ export const CardProject = ({ id, title, description, urlSite, linkRep, foto, al
         <h1>{title}</h1>
         <p>{description}</p>
         <p>The technologies used were:</p>
-        <div className={style.technologics}>
-          {id === 1 && <TechPA />}
-          {id === 2 && (
-            <>
-              <TechPA />
-              <img src={vite} alt="Vite logo" />
-              <p>Vite</p>
-            </>
-          )}
-          {(id === 3 || id === 4 || id === 5) && <TechMD />}
+        <div className={style.technologies}>
+         {technology.map((tech) => (
+          <div className={style.tech}>
+             <img src={tech.logo} alt={`${tech.desclogo} logo`} />
+             <span>{tech.desclogo}</span>
+          </div>
+        ))}
         </div>
         <div className={style.btLinks}>
           <a target="_blank" href={linkRep}>

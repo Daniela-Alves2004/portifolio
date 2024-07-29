@@ -1,3 +1,5 @@
+import style from "./Tech.module.scss";
+
 interface TechProps {
     className: string;
     label: string;
@@ -5,8 +7,8 @@ interface TechProps {
 }
 const Tech = ({className,label,image}:TechProps) => {
     return (
-        <div className={className}>
-            <img className='logo' src={image} />
+        <div className={style.classNameTech}>
+            <img className={style.logoTech} src={image} />
             <p>{label} </p> 
         </div>
     );
