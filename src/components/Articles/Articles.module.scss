@@ -33,35 +33,19 @@
 .articleText p{
     font-size: 13px;
 }
-.articleText a{
-    width: 242px;
-    height: 67px;
-    border: 1px solid $primary;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    gap: 18px;
-    margin-top: 24px;
-}
-.articleText a:hover{
-    background-color: $accent;
-    width: 242px;
-    height: 77px; 
-}
+
 .articleMD{
     display: flex;
     flex-direction: row-reverse;
     margin-top:82px ;
 
 }
-.loading{
+.iconArticle{
     width: 300px;
     height: 350px;
     
 }
-.teste, .teste1{
+.articleImage{
     width: 300px;
     display: flex;
     justify-content: center;

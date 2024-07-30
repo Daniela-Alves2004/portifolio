@@ -3,12 +3,12 @@ import foto from "../../assets/hi.jpg";
 import download from "../../assets/download.png";
 import linkedin from "../../assets/linkedin.png";
 import github from "../../assets/github.png";
-
+import Button from "../Button";
 function About() {
     return (
         <div className={style.conteiner}>
             <div className={style.photo}>
-                <img src={foto} alt="" />
+                <img src={foto} alt="photo hello" />
             </div>
             <div className={style.conteinerDescription}>
                 <div className={style.TextAbout}>
@@ -34,9 +34,9 @@ function About() {
                     </p>
                 </div>
                 <div className={style.contact}>
-                    <a href="#">Download CV <img src={download}/> </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/daniela-dos-santos-alves/"> Linkedin<img src={linkedin} />  </a>
-                    <a target="_blank" href="https://github.com/Daniela-Alves2004"> GitHub<img src={github} />  </a>
+                    <Button className="aContact" btclassName="btContact" btLink="https://www.linkedin.com/in/daniela-dos-santos-alves/" image={download} label='Linkendin'/>
+                    <Button className="aContact" btclassName="btContact" btLink="#" image={download} label='Download CV'/>
+                    <Button className="aContact" btclassName="btContact" btLink="https://github.com/Daniela-Alves2004" image={github} label='GitHub'/>
                 </div>
             </div>
 

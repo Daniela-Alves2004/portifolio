@@ -31,3 +31,45 @@
     position: relative;
     bottom:15px
 }
+
+.btContact{
+    width: 160px;
+    height: 54px;
+    border: 1px solid $primary;
+    background-color: transparent;
+    font-size: 13px ;   
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: $primary;
+}
+.btContact:hover{
+    width: 180px;
+    height: 60px; 
+}
+.aContact{
+    text-decoration: none;
+
+}
+.aArticles{
+    text-decoration: none;
+}
+.btArticles{
+    width: 242px;
+    height: 67px;
+    border: 1px solid $primary;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 24px;
+    background-color: transparent;
+}
+.btArticles:hover{
+    background-color: $accent;
+    width: 242px;
+    height: 77px; 
+}
