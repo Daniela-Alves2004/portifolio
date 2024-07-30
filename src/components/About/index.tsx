@@ -34,7 +34,7 @@ function About() {
                     </p>
                 </div>
                 <div className={style.contact}>
-                    <Button className="aContact" btclassName="btContact" btLink="https://www.linkedin.com/in/daniela-dos-santos-alves/" image={download} label='Linkendin'/>
+                    <Button className="aContact" btclassName="btContact" btLink="https://www.linkedin.com/in/daniela-dos-santos-alves/" image={linkedin} label='Linkendin'/>
                     <Button className="aContact" btclassName="btContact" btLink="#" image={download} label='Download CV'/>
                     <Button className="aContact" btclassName="btContact" btLink="https://github.com/Daniela-Alves2004" image={github} label='GitHub'/>
                 </div>
