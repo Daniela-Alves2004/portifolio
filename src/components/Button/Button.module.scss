@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+
+.aProjects{
+    text-decoration: none;
+    
+
+}
+.btProjects{
+    overflow: hidden;
+    max-width: 150px;
+    max-height: 50px;   
+    background-color: $accent;
+    color: $text;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: $font;
+    margin-top: 20px;
+    
+}
+.btProjects img{
+    width: 70px;
+    position: relative;
+    top:13px;
+    right: 30px;
+}
+.btProjects p{
+    position: relative;
+    bottom:15px
+}

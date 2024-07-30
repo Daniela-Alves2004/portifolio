@@ -1,10 +1,7 @@
-//import Teste from '../Teste';
-import TechPA from '../TechPA';
-import TechMD from '../TechMD';
 import style from './CardProject.module.scss';
-import vite from "../../assets/technologic/vite.png"
 import github from "../../assets/github1.png";
 import web from "../../assets/web.png";
+import Button from '../Button'; 
 
 interface CardProjectProps {
   id: number;
@@ -16,7 +13,6 @@ interface CardProjectProps {
   alt: string;
   technology: { logo: string; desclogo: string }[];
 }
-
 export const CardProject = ({ id, title, description, urlSite, linkRep, foto, alt,technology}: CardProjectProps) => {
   const isEven = id % 2 === 0; 
 
@@ -39,18 +35,12 @@ export const CardProject = ({ id, title, description, urlSite, linkRep, foto, al
         ))}
         </div>
         <div className={style.btLinks}>
-          <a target="_blank" href={linkRep}>
-            <button className={style.buttonGitHub}>
-              <p>GitHub</p>
-              <img src={github} alt="GitHub logo" />
-            </button>
-          </a>
-          <a target="_blank" href={urlSite}>
-            <button className={style.buttonWeb}>
-              <p>Access the website</p>
-              <img src={web} alt="Website logo" />
-            </button>
-          </a>
+          <p>To learn more, visit:</p>
+          <div className={style.btComponent}>
+            <Button btLink={linkRep} className='aProjects'  btclassName="btProjects" image={github} label="GitHub" />
+            <Button btLink={urlSite} className='aProjects'  btclassName="btProjects"  image={web} label="Website" />
+          </div>
+         
         </div>
       </div>
     </div>
