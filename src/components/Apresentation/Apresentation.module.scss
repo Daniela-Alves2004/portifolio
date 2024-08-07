@@ -7,6 +7,8 @@
     align-items: center;
     gap: 60px ;
     font-family: $font;
+    background-color:$background;
+    
 }
 .containerText {
     display: flex;
@@ -22,11 +24,11 @@
 }
 .containerText p{
     font-size: 16px;
-    color: $text;
+    color:$text;
     
 }
 span{
-    color: $accent;
+    color:$accent;
 }
 .containerImage img{
     width: 435px;
@@ -37,7 +39,7 @@ span{
 .containerImage{
     width: 507px;
     height: 673px; 
-    background-color: $secondary;
+    background-color:$secondary;
     border-radius: 30px;
     display: flex;
     justify-content: center;
