@@ -1,4 +1,4 @@
-import srDenteImage from "../../assets/mockups/srDente.png";
+import srDenteImage from "../../assets/mockups/Captura de tela 2024-08-08 144255.png";
 import lpSquadImage from '../../assets/mockups/lpSquad.png';
 import meninasDigitaisImage from '../../assets/mockups/MD.png';
 import marioImage from '../../assets/mockups/mario.png';

@@ -1,13 +1,8 @@
 import style from "./Header.module.scss";
-import Dark from "../../app.module.scss";
 import logo from "../../assets/terminal.png";
-import sun from "../../assets/sun.png";
-import mood from "../../assets/mood.png";
-import brasil from "../../assets/brasil.png";
-
 
 function Header  () {
-
+  
   return (
     <div className={style.container}>
         <div className={style.logo}>
@@ -20,7 +15,7 @@ function Header  () {
             <a href="#">My articles</a>
         </div>
         <div className={style.btMode}>
-            <button className={style.btLanguage}> translate to pt-bt <img src={brasil} alt="Brazil's flag" /></button>
+        
         </div>
     </div>
     
