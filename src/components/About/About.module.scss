@@ -1,7 +1,6 @@
 @use "../../styles/variables.scss" as *;
 
 .conteiner{
-    width: 1920px;
     height: 1080px;
     display: flex;
     background: rgb(169,126,246);
@@ -11,6 +10,8 @@
     justify-content: center;
     align-items: center;
     gap: 46px ;
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
 
 }
 .conteinerDescription{
