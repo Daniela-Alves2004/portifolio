@@ -19,7 +19,7 @@ type CursorVariant = "default";
 
 function App() {
   const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
-  const [cursorVariant, setCursorVariant] = useState<CursorVariant>("default");
+  const [cursorVariant] = useState<CursorVariant>("default");
 
   useEffect(() => {
     // Função de movimentação do mouse com throttle
