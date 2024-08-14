@@ -26,9 +26,9 @@ function App() {
     const mouseMove = throttle((e: MouseEvent) => {
       setMousePosition({
         x: e.clientX,
-        y: e.clientY ,
+        y: e.clientY , 
       });
-    }, 20); // Atualiza a cada 16ms (aproximadamente 60 FPS)
+    }, 23); // Atualiza a cada 16ms (aproximadamente 60 FPS)
 
     window.addEventListener("mousemove", mouseMove);
 
@@ -41,12 +41,8 @@ function App() {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-      backgroundColor: "#000",
-      transition: {
-        type: "spring",
-        stiffness: 500,
-        damping: 30,
-      }
+      backgroundColor: 'transparent',
+      border:'3px solid #4600be',
     },
   };
 
