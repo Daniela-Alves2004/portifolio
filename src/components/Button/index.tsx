@@ -6,7 +6,7 @@ interface ButtonProps {
     label: string;
     image: string;
     btclassName ?: string;
-    onClick: () => void;
+    onClick : () => void;
 }
 
 const Button = ({ btLink, className,btclassName, image, label,onClick }: ButtonProps) => {
