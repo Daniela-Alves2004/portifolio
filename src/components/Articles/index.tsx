@@ -27,7 +27,7 @@ function Articles() {
                         <br></br> Results:....
                         <br></br> Conclusion: ..
                     </p>
-                    <Button btLink="#" className="aArticles" btclassName="btArticles" image={iconRead} label="Read the full article"/>
+                    <Button btLink="#" className="aArticles" btclassName="btArticles" image={iconRead} label="Read the full article"  onClick={() => console.log('button clicked')}/>
                 </div>
 
             </div>
@@ -45,7 +45,7 @@ function Articles() {
                         and STEM, encouraging and helping elementary and high school girls from public schools in the cities of Cornélio Procópio and the surrounding area, in the interior of Paraná, to<br></br>
                         conquer their space in these areas. To this end, the project promotes actions such as programming workshops, mentoring and discussion groups, including in these actions the<br></br>
                         resolution of challenges of the Sustainable Development Goals (SDGs).</p>
-                    <Button btLink="#" className="aArticles" btclassName="btArticles" image={iconRead} label="Read the full article"/>
+                    <Button btLink="#" className="aArticles" btclassName="btArticles" image={iconRead} label="Read the full article"  onClick={() => console.log('Button clicked')}/>
 
                 </div>
 

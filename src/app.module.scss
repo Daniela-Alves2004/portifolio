@@ -15,7 +15,7 @@
  
 
 .cursor{
-    background-color: black;
+    background-color:green;
     height: 32px;
     width: 32px;
     border-radius: 50%;
@@ -23,4 +23,15 @@
     top: 0;
     left: 0;
     pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.cursor::after {
+    content: '';
+    height: 6px; /* Tamanho do ponto central */
+    width: 6px;
+    background-color: #4600be; /* Cor do ponto central */
+    border-radius: 50%;
 }

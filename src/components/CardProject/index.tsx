@@ -36,8 +36,8 @@ export const CardProject = ({ id, title, description, urlSite, linkRep,technolog
         <div className={style.btLinks}>
           <p>To learn more, visit:</p>
           <div className={style.btComponent}>
-            <Button btLink={linkRep} className='aProjects' btclassName="btProjects" image={github} label="GitHub" />
-            <Button btLink={urlSite} className='aProjects' btclassName="btProjects" image={web} label="Website" />
+            <Button btLink={linkRep} className='aProjects' btclassName="btProjects" image={github} label="GitHub"  onClick={() => console.log('GitHub clicked')} />
+            <Button btLink={urlSite} className='aProjects' btclassName="btProjects" image={web} label="Website"  onClick={() => console.log('WebSite clicked')} />
           </div>
 
         </div>
