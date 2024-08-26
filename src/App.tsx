@@ -61,6 +61,9 @@ function App() {
         My Projects
       </h1>
       <Projects />
+      <h1 className={styles.titleArticle}>
+        My Articles.
+      </h1>
       <Articles />
       <Footer />
     </div>
