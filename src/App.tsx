@@ -1,14 +1,13 @@
 import styles from './app.module.scss';
-import About from './components/About';
-import Apresentation from './components/Apresentation';
-import Articles from './components/Articles';
-import Header from "./components/Header";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
-import wave from "../src/assets/Vector.png";
+import Header from "./components/Macro/Header";
+import Footer from "./components/Macro/Footer";
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { throttle } from 'lodash';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import  HomePage  from "./pages/HomePage";
+import NotPublic from './pages/NotPublicPage';
+import BackToTopButton from './components/Micro/BackTopButton';
 
 type MousePosition = {
   x: number;
@@ -54,19 +53,16 @@ function App() {
         animate={cursorVariant}
       />
       <Header />
-      <Apresentation />
-      <About />
-      <h1 className={styles.titleProjects}>
-        <img src={wave} alt="" />
-        My Projects
-      </h1>
-      <Projects />
-      <h1 className={styles.titleArticle}>
-        My Articles.
-      </h1>
-      <Articles />
-      <Footer />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path='/not-public' element={<NotPublic />} />
+    </Routes>
+    </BrowserRouter>
+    <BackToTopButton />
+    <Footer />
     </div>
+   
   );
 }
 

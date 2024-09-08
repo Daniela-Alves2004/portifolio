@@ -1,0 +1,17 @@
+@use "../../../styles/variables" as *;
+
+.titleProjects{
+    font-size: 6rem; 
+    font-family: $font;
+    color: $primary;
+    text-align: center;
+}
+@media screen and (min-width: 360px) and (max-width: 414px) {
+    .titleProjects{
+        font-size: 3rem; 
+        font-family: $font;
+        color: $primary;
+        text-align: center;
+    }
+
+}

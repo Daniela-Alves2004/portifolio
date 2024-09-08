@@ -1,0 +1,25 @@
+// BackToTopButton.module.scss
+@use "../../../styles/variables" as *;
+
+.backToTop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1000;
+  }
+  
+  .backToTopButton {
+    background-color: $primary;
+    color:$background;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+  
+    &:hover {
+      background-color: $accent;
+    }
+  }
+  

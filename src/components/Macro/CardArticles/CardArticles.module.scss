@@ -1,0 +1,149 @@
+@use "../../../styles/variables" as *;
+
+.container {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: $font;
+    background-color: $secondary;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.conteudo_img img {
+    height: 40rem;
+    width: 25rem;
+    border-radius: 1.25rem;
+}
+
+.conteudo_text {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding-left: 1.8rem;
+    width: 50rem;
+}
+
+.conteudo_text h2 {
+    font-size: 2rem;
+    color: $primary;
+}
+
+.conteudo_text p {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1440px) {
+    .container{
+        padding: 2rem;
+
+    }
+    .conteudo_img img {
+        height: 35rem;
+        width: 22rem;
+    }
+
+    .conteudo_text {
+        width: 40rem;
+        padding-left: 1.5rem;
+    }
+
+    .conteudo_text h2 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo_text p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 1044px) {
+    .container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .conteudo_img img {
+        height: 30rem;
+        width: 100%;
+        max-width: 22rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .conteudo_text {
+        width: 70%;
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .conteudo_text h2 {
+        font-size: 1.5rem;
+    }
+
+    .conteudo_text p {
+        font-size: 0.7rem;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 414px) {
+    .container {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+  
+    .conteudo_img img {
+      height: 20rem;
+      width: 100%;
+      max-width: 18rem;
+      margin-bottom: 1rem;
+    }
+  
+    .conteudo_text {
+      width: 90%;
+      padding-left: 0;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .conteudo_text h2 {
+      font-size: 1.3rem;
+    }
+  
+    .conteudo_text p {
+      font-size: 0.65rem;
+    }
+  }
+  
+  @media screen and (min-width: 640px) and (max-width: 896px) {
+    .container {
+      flex-direction: column;
+      padding: 2rem;
+    }
+  
+    .conteudo_img img {
+      height: 25rem;
+      width: 100%;
+      max-width: 20rem;
+      margin-bottom: 1rem;
+    }
+  
+    .conteudo_text {
+      width: 80%;
+      padding-left: 0;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .conteudo_text h2 {
+      font-size: 1.4rem;
+    }
+  
+    .conteudo_text p {
+      font-size: 0.7rem;
+    }
+  }
+  
