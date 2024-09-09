@@ -8,18 +8,21 @@
     align-items: center;
     font-family: $font;
     background-color: $secondary;
-   // gap:1rem;
 }
 
 .reverse {
+    display: flex;
     flex-direction: row-reverse;
+    background-color: red;
+    justify-content: center;
 }
-
+.reverse .conteudo_text {
+    padding-right: 4rem;
+}
 .conteudo_img img {
     height: 40rem;
     width: 25rem;
     border-radius: 1.25rem;
-    ppadding-right: 1rem;
 }
 
 .conteudo_text {
