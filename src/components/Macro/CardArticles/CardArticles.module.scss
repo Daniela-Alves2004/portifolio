@@ -8,7 +8,7 @@
     align-items: center;
     font-family: $font;
     background-color: $secondary;
-    gap:1rem;
+   // gap:1rem;
 }
 
 .reverse {
@@ -19,6 +19,7 @@
     height: 40rem;
     width: 25rem;
     border-radius: 1.25rem;
+    ppadding-right: 1rem;
 }
 
 .conteudo_text {
