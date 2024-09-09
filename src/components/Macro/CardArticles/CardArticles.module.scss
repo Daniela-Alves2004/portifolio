@@ -8,15 +8,13 @@
     align-items: center;
     font-family: $font;
     background-color: $secondary;
+    gap:1rem;
 }
 
 .reverse {
     flex-direction: row-reverse;
-    padding-right: 2rem;
 }
-.reverse p{
-    text-align: left;
-}
+
 .conteudo_img img {
     height: 40rem;
     width: 25rem;
