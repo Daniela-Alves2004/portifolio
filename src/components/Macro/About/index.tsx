@@ -7,16 +7,8 @@ import Button from "../../Micro/Button";
 import { motion } from "framer-motion"
 function About() {
     function downloadCV() {
-        const fileUrl = "../../../assets/About/cv.pdf";
-        const link = document.createElement('a');
-        link.href = fileUrl;
-        link.download = 'CVDanielaAlves.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        window.open("https://drive.google.com/file/d/1IsOZFTT9Xk-r0Svm_jMvWwXrepWbnNzy/view?usp=sharing", "_blank")
     }
-
-
     return (
         <div id="about" className={style.conteiner}>
             <motion.div
