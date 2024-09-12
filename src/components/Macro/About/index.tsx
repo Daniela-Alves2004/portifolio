@@ -4,30 +4,25 @@ import download from "../../../assets/About/download.png";
 import linkedin from "../../../assets/linkedin.png";
 import github from "../../../assets/About/github.png";
 import Button from "../../Micro/Button";
-import { motion } from "framer-motion"
 function About() {
     function downloadCV() {
         window.open("https://drive.google.com/file/d/1IsOZFTT9Xk-r0Svm_jMvWwXrepWbnNzy/view?usp=sharing", "_blank")
     }
     return (
         <div id="about" className={style.conteiner}>
-            <motion.div
+            <div
                 className={style.photo}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 2, delay: 0.5 }}
+
             >
                 <div className={style.photo}>
                     <img src={foto} alt="photo hello" />
                 </div>
-            </motion.div>
+            </div>
 
             <div className={style.conteinerDescription}>
-                <motion.div
+                <div
                     className={style.conteinerDescription}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1 }}
+
                 >
                     <div className={style.TextAbout}>
                         <h1>About me.</h1>
@@ -52,18 +47,16 @@ function About() {
                         </p>
                     </div>
                     <div className={style.contact}>
-                        <motion.div
+                        <div
                             className={style.contact}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.5 }}
+
                         >
                             <Button className="aContact" btclassName="btContact" btLink="https://www.linkedin.com/in/daniela-dos-santos-alves/" image={linkedin} label='Linkendin' onClick={() => console.log('LinkedIn clicked')} />
                             <Button className="aContact" btclassName="btContact" btLink="#" image={download} label='Download CV' onClick={() => downloadCV()} />
                             <Button className="aContact" btclassName="btContact" btLink="https://github.com/Daniela-Alves2004" image={github} label='GitHub' onClick={() => console.log('GitHub clicked')} />
-                        </motion.div>
+                        </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
 
 
