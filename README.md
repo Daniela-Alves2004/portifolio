@@ -24,7 +24,7 @@ Enjoy browsing through my portfolio! 😊
 
 ## Development Environment 🖥️
 
-- **VSCode**: My preferred code editor.
+- **VSCode** <img align="center" height="30" width="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg"/>
 
 ## Developed by 
 
