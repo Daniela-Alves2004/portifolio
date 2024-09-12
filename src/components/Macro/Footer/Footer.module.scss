@@ -1,67 +1,69 @@
 @use "../../../styles/variables" as *;
 
 footer {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: $font;
-    font-weight: bold;
-    font-size: 1rem;
-    color: $primary;
-    padding: 2rem 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: $font;
+  font-weight: bold;
+  font-size: 1rem;
+  color: $primary;
+  padding: 2rem 0;
 }
 
 .icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+
 }
 
-@media (max-width: 1440px) {
-    footer {
-        padding: 1.5rem 0;
-        font-size: 0.9rem;
-    }
 
-    .icons {
-        gap: 1rem;
-    }
+@media (max-width: 1440px) {
+  footer {
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .icons {
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 1044px) {
-    footer {
-        padding: 1rem 0;
-        font-size: 0.85rem;
-    }
+  footer {
+    padding: 1rem 0;
+    font-size: 0.85rem;
+  }
 
-    .icons {
-        gap: 0.5rem;
-    }
+  .icons {
+    gap: 0.5rem;
+  }
 }
+
 @media screen and (min-width: 640px) and (max-width: 896px) {
-        footer {
-          padding: 1rem 0;
-          font-size: 0.8rem;
-        }
-      
-        .icons {
-          gap: 0.75rem;
-        }
-      }
-      
+  footer {
+    padding: 1rem 0;
+    font-size: 0.8rem;
+  }
+
+  .icons {
+    gap: 0.75rem;
+  }
+}
+
 
 @media screen and (min-width: 360px) and (max-width: 414px) {
-    footer {
-      padding: 0.5rem 0;
-      font-size: 0.75rem;
-    }
-  
-    .icons {
-      gap: 0.5rem;
-    }
+  footer {
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
   }
-  
+
+  .icons {
+    gap: 0.5rem;
+  }
+}

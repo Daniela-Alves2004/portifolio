@@ -13,7 +13,6 @@
 .reverse {
     display: flex;
     flex-direction: row-reverse;
-    //background-color: red;
     justify-content: center;
 }
 .reverse .conteudo_text {
@@ -71,7 +70,9 @@
         flex-direction: column;
         padding: 2rem;
     }
-
+    .reverse .conteudo_text{
+      padding-left: 5rem;
+    }
     .conteudo_img img {
         height: 30rem;
         width: 100%;
@@ -99,7 +100,9 @@
       flex-direction: column;
       padding: 1.5rem;
     }
-  
+    .reverse .conteudo_text{
+      padding-left: 5rem;
+    }
     .conteudo_img img {
       height: 20rem;
       width: 100%;
@@ -128,7 +131,9 @@
       flex-direction: column;
       padding: 2rem;
     }
-  
+    .reverse .conteudo_text{
+      padding-left: 5rem;
+    }
     .conteudo_img img {
       height: 25rem;
       width: 100%;

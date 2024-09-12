@@ -29,7 +29,7 @@ const data = [
       urlSite: 'https://pipoca-agil-apresentacao.vercel.app',
       linkRep:'https://github.com/luscabap/pipoca-agil-apresentacao',
       textgithub:'GitHub',
-      textSite:'Access the website',
+      textSite:'website',
       technology: [
         { logo: react, desclogo: "React" },
         { logo: typeScript, desclogo: "TypeScript" },

@@ -78,7 +78,7 @@ export const CardProject = ({ id, title, description, urlSite, linkRep, technolo
               className='aProjects'
               btclassName="btProjects"
               image={web}
-              label="Website"
+              label="Site"
               onClick={() => console.log('WebSite clicked')}
             />
           </motion.div>
