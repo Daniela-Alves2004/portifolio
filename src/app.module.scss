@@ -1,13 +1,12 @@
 @use "./styles/variables" as *;
 
-*{
+* {
     cursor: none;
-    
+
 }
 
 
-.cursor{
-    background-color:green;
+.cursor {
     height: 32px;
     width: 32px;
     border-radius: 50%;
@@ -20,10 +19,25 @@
     justify-content: center;
     z-index: 9999;
 }
+
 .cursor::after {
     content: '';
-    height: 6px; /* Tamanho do ponto central */
+    height: 6px;
+    /* Tamanho do ponto central */
     width: 6px;
-    background-color: #4600be; /* Cor do ponto central */
+    background-color: #4600be;
+    /* Cor do ponto central */
     border-radius: 50%;
+}
+
+@media screen and (min-width: 640px) and (max-width: 896px) {
+    .cursor {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 414px) {
+    .cursor {
+        display: none;
+    }
 }
