@@ -1,15 +1,12 @@
-import { motion } from "framer-motion";
 import style from "./Apresentation.module.scss";
 import imagem from "../../../assets/hi.jpg";
 
 function Apresentation() {
   return (
     <div className={style.container}>
-      <motion.div
+      <div
         className={style.containerText}
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
+
       >
         <h1>
           Hi, I&apos;m <span>Daniela Alves</span>
@@ -23,15 +20,13 @@ function Apresentation() {
           <br />
           undergraduate.
         </p>
-      </motion.div>
-      <motion.div
+      </div>
+      <div
         className={style.containerImage}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+
       >
         <img src={imagem} alt="Imagem de uma mulher sorrindo" />
-      </motion.div>
+      </div>
     </div>
   );
 }
