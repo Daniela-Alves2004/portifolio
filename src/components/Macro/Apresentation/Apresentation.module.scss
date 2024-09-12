@@ -115,7 +115,7 @@ span {
 @media screen and (min-width: 360px) and (max-width: 414px) {
     .container {
         flex-direction: column;
-        padding: 2rem 0 ;
+        padding: 2rem 0;
         gap: 1.5rem;
     }
 
@@ -132,6 +132,7 @@ span {
     .containerText p {
         font-size: 1rem;
     }
+
     .containerImage {
         display: none;
     }
