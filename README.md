@@ -28,4 +28,5 @@ Enjoy browsing through my portfolio! 😊
 
 ## Developed by 
 
-Daniela Alves [LinkedIn Profile](https://www.linkedin.com/in/daniela-dos-santos-alves/)
+<a href="https://www.linkedin.com/in/daniela-dos-santos-alves/">
+Daniela Alves</a>
