@@ -17,10 +17,10 @@ Enjoy browsing through my portfolio! 😊
 
 ## 📌 Future Actions
 
-- ✨ **Add animations**: Implement animations to make the experience more engaging and fun.
-- ⚡ **Make the website more dynamic**: Improve the interactivity and fluidity of the website, providing more agile navigation.
-- 🌗 **Add Dark Theme**: Provides a dark theme option for better visual comfort in low-light environments.
-- 🌎 **Add Portuguese translation**: Add support for multiple languages, starting with the Portuguese translation.
+- **Add animations ✨**: Implement animations to make the experience more engaging and fun.
+- **Make the website more dynamic ⚡**: Improve the interactivity and fluidity of the website, providing more agile navigation.
+- **Add Dark Theme 🌗**: Provides a dark theme option for better visual comfort in low-light environments.
+-**Add Portuguese translation 🌎**: Add support for multiple languages, starting with the Portuguese translation.
 
 ## Technologies Used 🛠️
 
