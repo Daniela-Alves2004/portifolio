@@ -13,14 +13,8 @@ interface CardArticlesProps {
 
 export const CardArticles = ({ titleArticle, abstract, imgArticle, labelArticle, reverse }: CardArticlesProps) => {
     return (
-        <div
-            className={`${style.container} ${reverse ? style.reverse : ''}`}
-
-        >
-            <div
-                className={style.conteudo_img}
-
-            >
+        <div className={`${style.container} ${reverse ? style.reverse : ''}`}>
+            <div className={style.conteudo_img}>
                 <img className={style.imgArticle} src={imgArticle} alt="Pagina 1 do artigo" />
             </div>
             <div
