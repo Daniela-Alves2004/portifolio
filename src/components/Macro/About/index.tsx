@@ -27,22 +27,17 @@ function About() {
                     <div className={style.TextAbout}>
                         <h1>About me.</h1>
                         <p>
-                            I volunteer as a <span>front-end developer</span> at Pipoca Ágil,
-                            where I develop solutions using technologies such as React.js,
-                            TypeScript, SCSS,and Vite. At Yadax,
-                            I gained experience in Oracle database  administration,
-                            performing maintenance tasks.
-                            <br /> <br />
-                            During my <span>Software Engineering</span> degree,
-                            I not only learned technical concepts but also
-                            participated in extension projects like Meninas  Digitais,
-                            where I currently <span>serve as a coordinator</span>, and have previously
-                            been a mentor and <span>leader</span> of the <span>marketing </span>sector.
-                            These experiences helped me develop interpersonal
-                            skills such as <span>communication</span>, <span>teamwork</span>, and <span>leadership</span>.
-                            Additionally, I participated in a <span>cientific initiation</span>,
-                            which improved my writing skills and provided me with a solid
-                            foundation in conducting scientific research.
+                        I am a <span>Software Engineering</span> undergraduate at UTFPR and an <span>intern at StartSe</span>, 
+                        where I am part of the Artificial Intelligence squad. In my daily work, 
+                        I develop solutions using Flowise and N8N while continuously deepening my 
+                        knowledge in automation and applied AI.  
+                        <br/>
+                        My experience as a front-end developer includes building websites with React.js, TypeScript, SCSS, and Vite. Additionally, I worked as a DBA at Yadax, 
+                        handling Cassandra, MongoDB, and Oracle, which strengthened my skills in database administration and management.  
+                        <br/>
+                        During my undergraduate studies, I participated in extension projects that enhanced my communication and leadership skills. 
+                        I also engaged in a <span>scientific research</span> project focused on knowledge management in software engineering, which improved my 
+                        academic writing and understanding of the research process.
 
                         </p>
                     </div>
@@ -52,7 +47,6 @@ function About() {
 
                         >
                             <Button className="aContact" btclassName="btContact" btLink="https://www.linkedin.com/in/daniela-dos-santos-alves/" image={linkedin} label='Linkendin' onClick={() => console.log('LinkedIn clicked')} />
-                            <Button className="aContact" btclassName="btContact" btLink="#" image={download} label='Download CV' onClick={() => downloadCV()} />
                             <Button className="aContact" btclassName="btContact" btLink="https://github.com/Daniela-Alves2004" image={github} label='GitHub' onClick={() => console.log('GitHub clicked')} />
                         </div>
                     </div>

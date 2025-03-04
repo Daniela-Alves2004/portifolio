@@ -12,13 +12,7 @@ function Apresentation() {
           Hi, I&apos;m <span>Daniela Alves</span>
         </h1>
         <p>
-          I work as a volunteer <span>front-end developer</span> at Pipoca Ágil,
-          <br />
-          creating websites with React.js, TypeScript, SCSS, and Vite,
-          <br />
-          using the Scrum methodology. I am also a <span>software engineering</span>
-          <br />
-          undergraduate.
+        Software Engineer | AI Intern
         </p>
       </div>
       <div
