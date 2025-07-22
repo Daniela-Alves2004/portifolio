@@ -10,7 +10,7 @@ function Footer() {
                 <a target="__black" href="https://www.linkedin.com/in/daniela-dos-santos-alves/"> <img src={linkedin} alt="" /></a>
             </div>
             <p>Desenvolvido por Daniela Alves.</p>
-            <p>2024 | Daniela Alves</p>
+            <p>2025 | Daniela Alves</p>
         </footer>
     );
 };
