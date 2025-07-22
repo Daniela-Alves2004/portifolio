@@ -1,0 +1,510 @@
+@use "../../../styles/variables" as *;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($primary, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba($primary, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($primary, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes numberCount {
+  from {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background:$background;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  font-family: $font;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 20%, rgba($primary, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba($accent, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.content {
+  width: 60%;
+  text-align: center;
+}
+
+.title {
+  height: auto;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 4rem;
+  background: linear-gradient(135deg, $primary 0%, $accent 50%, $secondary 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;  
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+.highlightCard {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  border: 1px solid $primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  overflow-x: hidden;
+
+
+}
+
+.highlightCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+
+.container.visible .card1 {
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+.container.visible .card2 {
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.container.visible .card3 {
+  animation: slideInRight 0.8s ease-out 0.6s both;
+}
+
+.highlightCard:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 60px rgba($primary, 0.2);
+  border-color: $accent;
+}
+.number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, $accent, $primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  animation: numberCount 0.5s ease-out;
+}
+
+.highlightCard:hover .number {
+  transform: scale(1.1);
+  animation: pulse 1.5s infinite;
+}
+
+.label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $primary;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.exploreBtn {
+  background: linear-gradient(135deg, $accent, $primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: $font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba($primary, 0.3);
+}
+
+.exploreBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, $primary, $secondary);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.exploreBtn:hover::before {
+  left: 0;
+}
+
+.exploreBtn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba($primary, 0.4);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.exploreBtn:hover .arrow {
+  transform: translateX(5px);
+}
+.ctaSection {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  margin-top: 3rem;
+}
+
+.container.visible .ctaSection {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  color: $text;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.primaryCta {
+  background: linear-gradient(135deg, $primary, $accent);
+  color: white;
+  border: none;
+  padding: 1.2rem 3rem;
+  border-radius: 3rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: $font;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba($primary, 0.3);
+}
+
+.primaryCta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, $accent, $secondary);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.primaryCta:hover::before {
+  left: 0;
+}
+
+.primaryCta:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 40px rgba($primary, 0.4);
+  animation: pulse 1.5s infinite;
+}
+
+.secondaryCta {
+  background: transparent;
+  color: $primary;
+  border: 2px solid $primary;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: $font;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: $primary;
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: white;
+    transform: scale(1.05);
+
+    &::after {
+      left: 0;
+    }
+  }
+}
+
+.container * {
+  will-change: transform, opacity;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 4rem 2rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .highlightGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .highlightCard {
+    width: 50%;
+  }
+
+  .number {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1044px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .highlightGrid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+  
+  .highlightCard {
+    padding: 2rem 1.5rem;
+  }
+  
+  .number {
+    font-size: 2.8rem;
+  }
+
+  .cardIcon {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .highlightCard:hover {
+    transform: translateY(-10px) scale(1.01);
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 896px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .highlightGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .titleSection {
+    margin-bottom: 3rem;
+  }
+
+  .ctaSection {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 414px) {
+  .content {
+    width: 90%;
+    padding-right: 4rem;
+    text-align: center;
+    background-color: white;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  
+  .highlightGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+  }
+  
+  .highlightCard {
+    padding: 2rem 1.2rem;
+  }
+  
+  .number {
+    font-size: 2.5rem;
+  }
+  
+  .label {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .exploreBtn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .cardIcon {
+    font-size: 2rem;
+  }
+
+  .primaryCta {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlightCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba($primary, 0.15);
+  }
+
+  .exploreBtn:hover {
+    transform: translateY(-1px) scale(1.02);
+  }
+
+  .primaryCta:hover {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .container.visible .card1,
+  .container.visible .card2,
+  .container.visible .card3 {
+    animation-duration: 0.6s;
+  }
+}
