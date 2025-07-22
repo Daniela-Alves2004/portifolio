@@ -7,12 +7,11 @@ interface CardProjectProps {
   id: number;
   title: string;
   description: string;
-  urlSite: string;
+  urlSite?: string;
   linkRep: string;
-  technology: { logo: string; desclogo: string }[];
 }
 
-export const CardProject = ({ id, title, description, urlSite, linkRep, technology }: CardProjectProps) => {
+export const CardProject = ({ id, title, description, urlSite, linkRep }: CardProjectProps) => {
   const isEven = id % 2 === 0;
 
   return (
@@ -26,28 +25,11 @@ export const CardProject = ({ id, title, description, urlSite, linkRep, technolo
       >
         <h1>{title}</h1>
         <p>{description}</p>
-        <p>The technologies used were:</p>
-        <div
-          className={style.technologies}
-
-        >
-          {technology.map((tech) => (
-            <div
-              className={style.tech}
-              key={tech.desclogo}
-
-            >
-              <img src={tech.logo} alt={`${tech.desclogo} logo`} />
-              <span>{tech.desclogo}</span>
-            </div>
-          ))}
-        </div>
 
         <div
           className={style.btLinks}
 
         >
-          <p>To learn more, visit:</p>
           <div
             className={style.btComponent}
 
@@ -60,14 +42,16 @@ export const CardProject = ({ id, title, description, urlSite, linkRep, technolo
               label="GitHub"
               onClick={() => console.log('GitHub clicked')}
             />
-            <Button
-              btLink={urlSite}
-              className='aProjects'
-              btclassName="btProjects"
-              image={web}
-              label="Site"
-              onClick={() => console.log('WebSite clicked')}
-            />
+            {urlSite && (
+              <Button
+                btLink={urlSite}
+                className='aProjects'
+                btclassName="btProjects"
+                image={web}
+                label="Site"
+                onClick={() => console.log('WebSite clicked')}
+              />
+            )}
           </div>
         </div>
       </div>
