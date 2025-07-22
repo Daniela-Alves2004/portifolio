@@ -1,5 +1,4 @@
 import styles from './app.module.scss';
-import Header from "./components/Macro/Header";
 import Footer from "./components/Macro/Footer";
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -21,13 +20,12 @@ function App() {
   const [cursorVariant] = useState<CursorVariant>("default");
 
   useEffect(() => {
-    // Função de movimentação do mouse com throttle
     const mouseMove = throttle((e: MouseEvent) => {
       setMousePosition({
         x: e.clientX,
         y: e.clientY , 
       });
-    }, 23); // Atualiza a cada 16ms (aproximadamente 60 FPS)
+    }, 23);
 
     window.addEventListener("mousemove", mouseMove);
 
@@ -52,7 +50,6 @@ function App() {
         variants={variants}
         animate={cursorVariant}
       />
-      <Header />
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage />} />
