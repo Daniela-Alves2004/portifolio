@@ -6,11 +6,15 @@ import waveAbout from "../../assets/Waves/waveAbout.png";
 import waveParaBaixo from "../../assets/Waves/waveParaBaixo.png";
 import waveArticle from "../../assets/Waves/waveArticle.png";
 import styles from "./HomePage.module.scss";
-
+import Highlights from "../../components/Macro/Highlights";
 const HomePage = () => {
   return (
     <div>
+
       <Apresentation />
+      <img className={styles.waveAboutParaBaixo} src={waveParaBaixo} alt="Imagem curvada na cor roxa" />
+      <Highlights />
+
       <img className={styles.waveAbout} src={waveAbout} alt="Imagem curvada na cor roxa"/>
       <About />
       <img className={styles.waveAboutParaBaixo} src={waveParaBaixo} alt="Imagem curvada na cor roxa" />

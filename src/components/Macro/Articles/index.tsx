@@ -5,7 +5,7 @@ import styles from "./Articles.module.scss";
 const Articles = () => {
     return (
         <div id="articles">
-            <h1 className={styles.titleArticle} >My Articles.</h1>
+            <h1 className={styles.titleArticle} >Papers.</h1>
             {articles.articleSbqs.map(dataArticle => (
                 <CardArticles
                     key={dataArticle.id} 
@@ -14,6 +14,7 @@ const Articles = () => {
                     abstract={dataArticle.abstract}
                     imgArticle={dataArticle.imgArticle}
                     labelArticle={dataArticle.labelArticle}
+                    btLink={dataArticle.btLink}
                     
                 />
             ))}
@@ -25,6 +26,7 @@ const Articles = () => {
                     abstract={dataArticle.abstract}
                     imgArticle={dataArticle.imgArticle}
                     labelArticle={dataArticle.labelArticle}
+                    btLink={dataArticle.btLink}
                     reverse={true}
                 />
             ))}

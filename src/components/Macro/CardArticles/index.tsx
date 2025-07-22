@@ -8,10 +8,11 @@ interface CardArticlesProps {
     abstract: string;
     imgArticle: string;
     labelArticle: string;
+    btLink: string;
     reverse?: boolean;
 }
 
-export const CardArticles = ({ titleArticle, abstract, imgArticle, labelArticle, reverse }: CardArticlesProps) => {
+export const CardArticles = ({ titleArticle, abstract, imgArticle, labelArticle, btLink, reverse }: CardArticlesProps) => {
     return (
         <div className={`${style.container} ${reverse ? style.reverse : ''}`}>
             <div className={style.conteudo_img}>
@@ -24,7 +25,7 @@ export const CardArticles = ({ titleArticle, abstract, imgArticle, labelArticle,
                 <h2>{titleArticle}</h2>
                 <p>{abstract}</p>
                 <Button
-                    btLink="/not-public"
+                    btLink={btLink}
                     className="aArticles"
                     btclassName="btArticles"
                     image={iconRead}
