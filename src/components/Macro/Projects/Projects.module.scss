@@ -6,6 +6,39 @@
     color: $primary;
     text-align: center;
 }
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.showMoreButton,
+.showLessButton {
+    background: linear-gradient(135deg, $accent 0%, #6b46c1 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: $font;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(70, 0, 190, 0.3);
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(70, 0, 190, 0.4);
+        background: linear-gradient(135deg, #5a4fcf 0%, #7c3aed 100%);
+    }
+    
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 10px rgba(70, 0, 190, 0.3);
+    }
+}
+
 @media screen and (min-width: 360px) and (max-width: 414px) {
     .titleProjects{
         font-size: 3rem; 
@@ -13,5 +46,11 @@
         color: $primary;
         text-align: center;
     }
-
+    
+    .showMoreButton,
+    .showLessButton {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        margin: 2rem 1rem;
+    }
 }
