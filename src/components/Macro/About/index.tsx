@@ -1,13 +1,9 @@
 import style from "./About.module.scss";
 import foto from "../../../assets/fotoDaniela.jpg";
-import download from "../../../assets/About/download.png";
 import linkedin from "../../../assets/linkedin.png";
 import github from "../../../assets/About/github.png";
 import Button from "../../Micro/Button";
 function About() {
-    function downloadCV() {
-        window.open("https://drive.google.com/file/d/1IsOZFTT9Xk-r0Svm_jMvWwXrepWbnNzy/view?usp=sharing", "_blank")
-    }
     return (
         <div id="about" className={style.conteiner}>
             <div
