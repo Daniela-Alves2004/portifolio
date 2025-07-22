@@ -1,27 +1,56 @@
 import style from "./Apresentation.module.scss";
-import imagem from "../../../assets/hi.jpg";
 
 function Apresentation() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className={style.container}>
-      <div
-        className={style.containerText}
+    <>
+      <div className={style.container}>
+        <div className={style.containerText}>
+          <h1>
+            Hi, I&apos;m <span className={style.name}>Daniela Alves</span>
+          </h1>
 
-      >
-        <h1>
-          Hi, I&apos;m <span>Daniela Alves</span>
-        </h1>
-        <p>
-        Software Engineer | AI Intern
-        </p>
-      </div>
-      <div
-        className={style.containerImage}
+          <p className={style.mainRole}>
+            Software Engineer | AI Intern
+          </p>
+          <div className={style.actionButtons}>
+            <button
+              className={style.primaryBtn}
+              onClick={() => scrollToSection('projects')}
+            >
+              View My Work
+            </button>
+            <button
+              className={style.secondaryBtn}
+              onClick={() => scrollToSection('about')}
+            >
+              About Me
+            </button>
+          </div>
 
-      >
-        <img src={imagem} alt="Imagem de uma mulher sorrindo" />
+          <div className={style.specialties}>
+            <div className={style.specialty}>
+              <span>AI Development</span>
+            </div>
+            <div className={style.specialty}>
+              <span>Web Development</span>
+            </div>
+            <div className={style.specialty}>
+              <span>Database Management</span>
+            </div>
+            <div className={style.specialty}>
+              <span>Research & Writing</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
