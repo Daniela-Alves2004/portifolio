@@ -2,6 +2,7 @@ import style from './CardProject.module.scss';
 import github from "../../../assets/Projects/github1.png";
 import web from "../../../assets/Projects/web.png";
 import Button from '../../Micro/Button';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 interface CardProjectProps {
   id: number;
@@ -13,6 +14,7 @@ interface CardProjectProps {
 
 export const CardProject = ({ id, title, description, urlSite, linkRep }: CardProjectProps) => {
   const isEven = id % 2 === 0;
+  const { t } = useLanguage();
 
   return (
     <div
@@ -23,8 +25,8 @@ export const CardProject = ({ id, title, description, urlSite, linkRep }: CardPr
         className={style.textProjects}
 
       >
-        <h1>{title}</h1>
-        <p>{description}</p>
+        <h1>{t(title)}</h1>
+        <p>{t(description)}</p>
 
         <div
           className={style.btLinks}
@@ -39,7 +41,7 @@ export const CardProject = ({ id, title, description, urlSite, linkRep }: CardPr
               className='aProjects'
               btclassName="btProjects"
               image={github}
-              label="GitHub"
+              label={t('projects.common.github')}
               onClick={() => console.log('GitHub clicked')}
             />
             {urlSite && (
@@ -48,7 +50,7 @@ export const CardProject = ({ id, title, description, urlSite, linkRep }: CardPr
                 className='aProjects'
                 btclassName="btProjects"
                 image={web}
-                label="Site"
+                label={t('projects.common.accessWebsite')}
                 onClick={() => console.log('WebSite clicked')}
               />
             )}

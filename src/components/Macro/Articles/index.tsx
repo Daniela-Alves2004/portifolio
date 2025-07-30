@@ -1,11 +1,14 @@
 import { CardArticles } from "../CardArticles";
 import articles from "./dataArticle"; 
 import styles from "./Articles.module.scss";
+import { useLanguage } from "../../../contexts/LanguageContext";
 
 const Articles = () => {
+    const { t } = useLanguage();
+    
     return (
         <div id="articles">
-            <h1 className={styles.titleArticle} >Papers.</h1>
+            <h1 className={styles.titleArticle} >{t('articles.title')}</h1>
             {articles.articleSbqs.map(dataArticle => (
                 <CardArticles
                     key={dataArticle.id} 

@@ -1,6 +1,10 @@
 import style from "./Apresentation.module.scss";
+import { useLanguage } from "../../../contexts/LanguageContext";
+import LanguageToggle from "../../Micro/LanguageToggle";
 
 function Apresentation() {
+  const { t } = useLanguage();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -9,48 +13,50 @@ function Apresentation() {
   };
 
   return (
-    <>
+    <div className={style.containerWrapper}>
+    <LanguageToggle />
       <div className={style.container}>
+        
         <div className={style.containerText}>
           <h1>
-            Hi, I&apos;m <span className={style.name}>Daniela Alves</span>
+            {t('presentation.greeting')} <span className={style.name}>Daniela Alves</span>
           </h1>
 
           <p className={style.mainRole}>
-            Software Engineer | AI Intern
+            {t('presentation.title')}
           </p>
           <div className={style.actionButtons}>
             <button
               className={style.primaryBtn}
               onClick={() => scrollToSection('projects')}
             >
-              View My Work
+              {t('presentation.viewWork')}
             </button>
             <button
               className={style.secondaryBtn}
               onClick={() => scrollToSection('about')}
             >
-              About Me
+              {t('presentation.aboutMe')}
             </button>
           </div>
 
           <div className={style.specialties}>
             <div className={style.specialty}>
-              <span>AI Development</span>
+              <span>{t('presentation.aiDev')}</span>
             </div>
             <div className={style.specialty}>
-              <span>Web Development</span>
+              <span>{t('presentation.webDev')}</span>
             </div>
             <div className={style.specialty}>
-              <span>Database Management</span>
+              <span>{t('presentation.dbManagement')}</span>
             </div>
             <div className={style.specialty}>
-              <span>Research & Writing</span>
+              <span>{t('presentation.research')}</span>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
