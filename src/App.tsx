@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { throttle } from 'lodash';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import  HomePage  from "./pages/HomePage";
-import NotPublic from './pages/NotPublicPage';
 import BackToTopButton from './components/Micro/BackTopButton';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 type MousePosition = {
   x: number;
@@ -44,22 +44,22 @@ function App() {
   };
 
   return (
-    <div className={styles.container}>
-      <motion.div
-        className={styles.cursor}
-        variants={variants}
-        animate={cursorVariant}
-      />
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path='/not-public' element={<NotPublic />} />
-    </Routes>
-    </BrowserRouter>
-    <BackToTopButton />
-    <Footer />
-    </div>
-   
+    <LanguageProvider>
+      <div className={styles.container}>
+        <motion.div
+          className={styles.cursor}
+          variants={variants}
+          animate={cursorVariant}
+        />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+      </BrowserRouter>
+      <BackToTopButton />
+      <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 

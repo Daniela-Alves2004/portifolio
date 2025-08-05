@@ -1,6 +1,7 @@
 import style from "./CardArticles.module.scss";
 import iconRead from "../../../assets/Articles/article.png";
 import Button from "../../Micro/Button";
+import { useLanguage } from "../../../contexts/LanguageContext";
 
 interface CardArticlesProps {
     id: number;
@@ -13,6 +14,8 @@ interface CardArticlesProps {
 }
 
 export const CardArticles = ({ titleArticle, abstract, imgArticle, labelArticle, btLink, reverse }: CardArticlesProps) => {
+    const { t } = useLanguage();
+    
     return (
         <div className={`${style.container} ${reverse ? style.reverse : ''}`}>
             <div className={style.conteudo_img}>
@@ -22,14 +25,14 @@ export const CardArticles = ({ titleArticle, abstract, imgArticle, labelArticle,
                 className={style.conteudo_text}
 
             >
-                <h2>{titleArticle}</h2>
-                <p>{abstract}</p>
+                <h2>{t(titleArticle)}</h2>
+                <p>{t(abstract)}</p>
                 <Button
                     btLink={btLink}
                     className="aArticles"
                     btclassName="btArticles"
                     image={iconRead}
-                    label={labelArticle}
+                    label={t(labelArticle)}
                     onClick={() => console.log('button clicked')}
                 />
             </div>

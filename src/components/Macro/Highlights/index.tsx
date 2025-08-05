@@ -1,10 +1,12 @@
 import style from "./Highlights.module.scss";
 import { useEffect, useState, useRef } from "react";
+import { useLanguage } from "../../../contexts/LanguageContext";
 
 function Highlights() {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedNumbers, setAnimatedNumbers] = useState({ projects: 0, research: 0, technologies: 0 });
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   const finalNumbers = { projects: 10, research: 2, technologies: 7 };
 
@@ -59,40 +61,40 @@ function Highlights() {
   return (
     <div ref={sectionRef} className={`${style.container} ${isVisible ? style.visible : ''}`}>
       <div className={style.content}>
-        <h2 className={style.title}>Explore My Portfolio.</h2>
+        <h2 className={style.title}>{t('highlights.title')}</h2>
         <div className={style.highlightGrid}>
           <div className={`${style.highlightCard} ${style.card1}`}>
             <div className={style.number}>{animatedNumbers.projects}</div>
-            <div className={style.label}>Live Projects</div>
+            <div className={style.label}>{t('highlights.projects')}</div>
             <button
               className={style.exploreBtn}
               onClick={() => scrollToSection('projects')}
             >
-              <span>View Projects</span>
+              <span>{t('highlights.viewProjects')}</span>
               <span className={style.arrow}>→</span>
             </button>
           </div>
 
           <div className={`${style.highlightCard} ${style.card2}`}>
             <div className={style.number}>{animatedNumbers.research}</div>
-            <div className={style.label}>Published Research</div>
+            <div className={style.label}>{t('highlights.research')}</div>
             <button
               className={style.exploreBtn}
               onClick={() => scrollToSection('articles')}
             >
-              <span>Read Papers</span>
+              <span>{t('highlights.readPapers')}</span>
               <span className={style.arrow}>→</span>
             </button>
           </div>
 
           <div className={`${style.highlightCard} ${style.card3}`}>
             <div className={style.number}>{animatedNumbers.technologies}+</div>
-            <div className={style.label}>Technologies</div>
+            <div className={style.label}>{t('highlights.technologies')}</div>
             <button
               className={style.exploreBtn}
               onClick={() => scrollToSection('about')}
             >
-              <span>See Skills</span>
+              <span>{t('highlights.seeSkills')}</span>
               <span className={style.arrow}>→</span>
             </button>
           </div>
