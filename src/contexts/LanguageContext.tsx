@@ -37,12 +37,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   );
 };
 
-// ✅ Tipagem para traduções
 type Translations = {
   [key: string]: { [key: string]: string };
 };
 
-// 🌐 Traduções
 const translations: Translations = {
   en: {
     // Presentation
@@ -66,53 +64,48 @@ const translations: Translations = {
 
     // About
     'about.title': 'About me.',
-    'about.description': 'I am a <strong>Software Engineering</strong> student at Univali, currently in my 6th semester. I have experience in <strong>web development</strong> with technologies like JavaScript, TypeScript, React, Node.js, and database management with MySQL and PostgreSQL.<br><br>Currently, I work as an <strong>AI intern at BRQ Digital Solutions</strong>, where I develop solutions using artificial intelligence and automation tools. I am passionate about technology and constantly seek to learn new skills and tackle complex challenges.<br><br>I have published research in the areas of <strong>software quality</strong> and <strong>machine learning</strong>, demonstrating my commitment to academic excellence and innovation in technology.',
+    'about.description': 'I am a <strong>Software Engineering</strong> undergraduate at UTFPR and an <strong>intern at StartSe</strong>, where I am part of the Artificial Intelligence squad. In my daily work, I develop solutions using Flowise and N8N while continuously deepening my knowledge in automation and applied AI. My experience as a front-end developer includes building websites with React.js, TypeScript, SCSS, and Vite. Additionally, I worked as a DBA at Yadax, handling Cassandra, MongoDB, and Oracle, which strengthened my skills in database administration and management.During my undergraduate studies, I participated in extension projects that enhanced my communication and leadership skills. I also engaged in a <strong>scientific research project</strong> focused on knowledge management in software engineering, which improved my academic writing and understanding of the research process.',
     'about.linkedin': 'Linkedin',
     'about.github': 'GitHub',
 
     // Projects
     'projects.title': 'My Projects.',
-    'projects.subtitle': 'Some things I have built recently',
-    'projects.view': 'View Project',
-    'projects.code': 'View Code',
-    'projects.showMore': 'Show more projects',
-    'projects.showLess': 'Show less projects',
-    'projects.remaining': 'remaining',
-
-    // Project Details
     'projects.common.github': 'GitHub',
-    'projects.common.accessWebsite': 'Access the website',
-    
-    // Individual Projects
-    'projects.bookManager.title': 'Book Manager System',
-    'projects.bookManager.description': 'A comprehensive book management system built with modern web technologies. Features include book cataloging, user management, and inventory tracking with an intuitive user interface.',
-    
+    'projects.common.accessWebsite': 'Access Website',
+    'projects.remaining':'remaining',
+    'projects.showMore': 'See more projects',
+    'projects.showLess': 'See less projects',
+
+
+    'projects.bookManager.title': 'Book Manager',
+    'projects.bookManager.description': 'Project developed in the "Full Stack Web Development" course. This application integrates with the Google Books API to search for and store books, allowing users to manage their personal or institutional library efficiently.',
+
     'projects.attendanceSystem.title': 'Attendance Registration System',
-    'projects.attendanceSystem.description': 'A digital attendance tracking system for workshops and events. Built with React and Node.js, featuring real-time attendance monitoring and detailed reporting.',
-    
-    'projects.srDente.title': 'Sr. Dente - Dental Clinic',
-    'projects.srDente.description': 'Modern and responsive website for a dental clinic. Features appointment scheduling, service information, and patient testimonials with a clean, professional design.',
-    
+    'projects.attendanceSystem.description': 'Developed for the "Integration Workshop 2" course. This system manages attendance for a university extension project that provides programming workshops for children and teenagers. Users can record attendance, view existing records, and add new workshops.',
+
+    'projects.srDente.title': 'Sr. Dente Project',
+    'projects.srDente.description': 'Volunteer project developed for Pipoca Ágil to educate and inform families about oral health. The platform offers accessible and educational content, guiding children through dental transitions and encouraging hygiene habits such as brushing, flossing, and cavity prevention in a playful and family-centered way.',
+
     'projects.digitalGirls.title': 'Digital Girls Project',
-    'projects.digitalGirls.description': 'Educational web platform promoting women in technology. Includes interactive courses, community features, and resources for career development in tech.',
-    
-    'projects.squadRoxo.title': 'Agile Popcorn - Team Purple',
-    'projects.squadRoxo.description': 'Collaborative project management tool inspired by agile methodologies. Features sprint planning, task tracking, and team collaboration tools.',
-    
-    'projects.marioGame.title': 'Mario Jump Game',
-    'projects.marioGame.description': 'Interactive browser game inspired by the classic Mario series. Built with vanilla JavaScript, featuring responsive controls and engaging gameplay.',
-    
-    'projects.todoList.title': 'Task Management App',
-    'projects.todoList.description': 'Modern task management application with drag-and-drop functionality, priority setting, and progress tracking. Built with React and local storage.',
-    
+    'projects.digitalGirls.description': 'Interactive platform created to support mentoring activities within the Digital Girls Project. It offers resources such as tutorials, educational links, project examples, and tips for Technovation Girls participants to help them access relevant content efficiently.',
+
+    'projects.squadRoxo.title': 'Squad Roxo Landing Page',
+    'projects.squadRoxo.description': 'Volunteer project for Pipoca Ágil showcasing the Squad Roxo Pastel team. This landing page introduces team members and their initiatives. Future updates will include responsiveness and automated testing.',
+
+    'projects.marioGame.title': 'Mario Game',
+    'projects.marioGame.description': 'A simple Mario-themed browser game where players avoid obstacles to keep playing. The game includes an intro screen with instructions, gameplay with score tracking, and a restart option after collision.',
+
+    'projects.todoList.title': 'To-Do List',
+    'projects.todoList.description': 'Task management app that allows users to create tasks with descriptions, due dates, and categories. Tasks can be marked as completed, deleted individually, or cleared all at once.',
+
     'projects.ticketSystem.title': 'Ticket Sales System',
-    'projects.ticketSystem.description': 'Complete ticket sales management system for events. Features inventory management, payment processing integration, and sales analytics.',
-    
+    'projects.ticketSystem.description': 'Backend project that simulates a ticket sales system, including user authentication and management of different ticket types. Built with Node.js, Express, Sequelize, and SQLite.',
+
     'projects.restApi.title': 'REST API Development',
-    'projects.restApi.description': 'Robust REST API built with Node.js and Express. Includes authentication, data validation, and comprehensive documentation.',
-    
-    'projects.backendApi.title': 'Backend API System',
-    'projects.backendApi.description': 'Scalable backend API system with database integration, user authentication, and automated testing. Built following best practices.',
+    'projects.restApi.description': 'RESTful API developed during the "Backend Development" course. The system allows for the registration of managers and students, including authentication and CRUD operations.',
+
+    'projects.backendApi.title': 'Backend Web API',
+    'projects.backendApi.description': 'A backend application developed in the "Backend Development" course to manage a library system with basic CRUD operations for book records.',
 
     // Articles
     'articles.title': 'Papers.',
@@ -135,13 +128,13 @@ const translations: Translations = {
     'presentation.title': 'Engenheira de Software | Estagiária em IA',
     'presentation.viewWork': 'Ver Meu Trabalho',
     'presentation.aboutMe': 'Sobre Mim',
-    'presentation.aiDev': 'Desenvolvimento de IA',
+    'presentation.aiDev': 'Desenvolvimento em IA',
     'presentation.webDev': 'Desenvolvimento Web',
-    'presentation.dbManagement': 'Banco de Dados',
+    'presentation.dbManagement': 'Gerenciamento de Banco de Dados',
     'presentation.research': 'Pesquisa e Escrita',
 
     // Destaques
-    'highlights.title': 'Explore Meu Portfólio.',
+    'highlights.title': 'Explore meu portfólio.',
     'highlights.projects': 'Projetos',
     'highlights.research': 'Pesquisas Publicadas',
     'highlights.technologies': 'Tecnologias',
@@ -151,53 +144,47 @@ const translations: Translations = {
 
     // Sobre
     'about.title': 'Sobre mim.',
-    'about.description': 'Sou estudante de <strong>Engenharia de Software</strong> na Univali, atualmente no 6º semestre. Tenho experiência em <strong>desenvolvimento web</strong> com tecnologias como JavaScript, TypeScript, React, Node.js e gerenciamento de banco de dados com MySQL e PostgreSQL.<br><br>Atualmente, trabalho como <strong>estagiária de IA na BRQ Digital Solutions</strong>, onde desenvolvo soluções utilizando inteligência artificial e ferramentas de automação. Sou apaixonada por tecnologia e busco constantemente aprender novas habilidades e enfrentar desafios complexos.<br><br>Tenho pesquisas publicadas nas áreas de <strong>qualidade de software</strong> e <strong>machine learning</strong>, demonstrando meu comprometimento com a excelência acadêmica e inovação em tecnologia.',
+    'about.description': 'Sou graduanda em <strong>Engenharia de Software</strong> na UTFPR e <strong>estagiária na StartSe</strong>, onde faço parte do squad de Inteligência Artificial. No meu dia a dia, desenvolvo soluções utilizando Flowise e N8N, enquanto aprofundo meu conhecimento em automação e IA aplicada. Minha experiência como desenvolvedora front-end inclui criação de sites com React.js, TypeScript, SCSS e Vite. Além disso, atuei como DBA na Yadax, trabalhando com Cassandra, MongoDB e Oracle, fortalecendo minhas habilidades em administração e gerenciamento de bancos de dados. Durante a graduação, participei de projetos de extensão que aprimoraram minhas habilidades de comunicação e liderança. Também participei de um <strong>projeto de iniciação científica</strong> focado em gestão do conhecimento em engenharia de software, o que melhorou minha escrita acadêmica e compreensão do processo de pesquisa.',
     'about.linkedin': 'Linkedin',
     'about.github': 'GitHub',
 
     // Projetos
     'projects.title': 'Meus Projetos.',
-    'projects.subtitle': 'Algumas coisas que construí recentemente',
-    'projects.view': 'Ver Projeto',
-    'projects.code': 'Ver Código',
+    'projects.common.github': 'GitHub',
+    'projects.common.accessWebsite': 'Acesse o site',
+    'projects.remaining':'restantes',
     'projects.showMore': 'Ver mais projetos',
     'projects.showLess': 'Ver menos projetos',
-    'projects.remaining': 'restantes',
 
-    // Detalhes de Projeto
-    'projects.common.github': 'GitHub',
-    'projects.common.accessWebsite': 'Acessar site',
-    
-    // Projetos Individuais
-    'projects.bookManager.title': 'Sistema Gerenciador de Livros',
-    'projects.bookManager.description': 'Sistema abrangente de gerenciamento de livros construído com tecnologias web modernas. Inclui catalogação de livros, gerenciamento de usuários e controle de inventário com interface intuitiva.',
-    
-    'projects.attendanceSystem.title': 'Sistema de Registro de Presença',
-    'projects.attendanceSystem.description': 'Sistema digital de controle de presença para workshops e eventos. Construído com React e Node.js, com monitoramento em tempo real e relatórios detalhados.',
-    
-    'projects.srDente.title': 'Sr. Dente - Clínica Odontológica',
-    'projects.srDente.description': 'Website moderno e responsivo para clínica odontológica. Inclui agendamento de consultas, informações de serviços e depoimentos de pacientes com design limpo e profissional.',
-    
-    'projects.digitalGirls.title': 'Projeto Digital Girls',
-    'projects.digitalGirls.description': 'Plataforma web educacional promovendo mulheres na tecnologia. Inclui cursos interativos, recursos comunitários e materiais para desenvolvimento de carreira em tech.',
-    
-    'projects.squadRoxo.title': 'Pipoca Ágil - Squad Roxo',
-    'projects.squadRoxo.description': 'Ferramenta colaborativa de gerenciamento de projetos inspirada em metodologias ágeis. Inclui planejamento de sprints, rastreamento de tarefas e ferramentas de colaboração em equipe.',
-    
-    'projects.marioGame.title': 'Jogo Mario Jump',
-    'projects.marioGame.description': 'Jogo interativo para navegador inspirado na série clássica Mario. Construído com JavaScript vanilla, com controles responsivos e jogabilidade envolvente.',
-    
-    'projects.todoList.title': 'App de Gerenciamento de Tarefas',
-    'projects.todoList.description': 'Aplicação moderna de gerenciamento de tarefas com funcionalidade de arrastar e soltar, definição de prioridades e acompanhamento de progresso. Construído com React e armazenamento local.',
-    
+    'projects.bookManager.title': 'Gerenciador de Livros',
+    'projects.bookManager.description': 'Projeto desenvolvido no curso de "Desenvolvimento Web Full Stack". Esta aplicação integra a API do Google Books para buscar e armazenar livros, permitindo que os usuários gerenciem sua biblioteca pessoal ou institucional de forma eficiente.',
+
+    'projects.attendanceSystem.title': 'Sistema de Registro de Presenças',
+    'projects.attendanceSystem.description': 'Desenvolvido para a disciplina "Oficina de Integração 2". Este sistema gerencia a frequência em um projeto de extensão universitário que oferece oficinas de programação para crianças e adolescentes. Os usuários podem registrar presenças, visualizar registros existentes e adicionar novas oficinas.',
+
+    'projects.srDente.title': 'Projeto Sr. Dente',
+    'projects.srDente.description': 'Projeto voluntário desenvolvido para o Pipoca Ágil, com objetivo de educar e informar famílias sobre saúde bucal. A plataforma oferece conteúdo acessível e educativo, guiando crianças nas transições dentárias e incentivando hábitos de higiene como escovação, uso de fio dental e prevenção de cáries de forma lúdica e familiar.',
+
+    'projects.digitalGirls.title': 'Projeto Meninas Digitais',
+    'projects.digitalGirls.description': 'Plataforma interativa criada para apoiar as atividades de mentoria no Projeto Meninas Digitais. Oferece recursos como tutoriais, links educativos, exemplos de projetos e dicas para as participantes do Technovation Girls, ajudando-as a acessar conteúdos relevantes de forma eficiente.',
+
+    'projects.squadRoxo.title': 'Landing Page do Squad Roxo',
+    'projects.squadRoxo.description': 'Projeto voluntário para o Pipoca Ágil, apresentando o time Squad Roxo Pastel. Esta landing page apresenta os membros da equipe e suas iniciativas. Atualizações futuras incluirão responsividade e testes automatizados.',
+
+    'projects.marioGame.title': 'Jogo do Mario',
+    'projects.marioGame.description': 'Um jogo simples no navegador com tema do Mario, onde os jogadores devem evitar obstáculos para continuar jogando. O jogo inclui uma tela inicial com instruções, pontuação durante a partida e opção de reinício após colisão.',
+
+    'projects.todoList.title': 'Lista de Tarefas',
+    'projects.todoList.description': 'Aplicativo de gerenciamento de tarefas que permite criar tarefas com descrição, prazo e categoria. As tarefas podem ser marcadas como concluídas, excluídas individualmente ou todas de uma vez.',
+
     'projects.ticketSystem.title': 'Sistema de Venda de Ingressos',
-    'projects.ticketSystem.description': 'Sistema completo de gerenciamento de vendas de ingressos para eventos. Inclui gestão de inventário, integração de processamento de pagamentos e análises de vendas.',
-    
+    'projects.ticketSystem.description': 'Projeto backend que simula um sistema de vendas de ingressos, incluindo autenticação de usuários e gerenciamento de diferentes tipos de ingressos. Desenvolvido com Node.js, Express, Sequelize e SQLite.',
+
     'projects.restApi.title': 'Desenvolvimento de API REST',
-    'projects.restApi.description': 'API REST robusta construída com Node.js e Express. Inclui autenticação, validação de dados e documentação abrangente.',
-    
-    'projects.backendApi.title': 'Sistema de API Backend',
-    'projects.backendApi.description': 'Sistema de API backend escalável com integração de banco de dados, autenticação de usuários e testes automatizados. Construído seguindo as melhores práticas.',
+    'projects.restApi.description': 'API RESTful desenvolvida durante o curso de "Desenvolvimento Backend". O sistema permite o cadastro de gestores e alunos, incluindo autenticação e operações CRUD.',
+
+    'projects.backendApi.title': 'API Web Backend',
+    'projects.backendApi.description': 'Aplicação backend desenvolvida no curso de "Desenvolvimento Backend" para gerenciar um sistema de biblioteca com operações CRUD básicas para registros de livros.',
 
     // Artigos
     'articles.title': 'Artigos.',
@@ -205,16 +192,12 @@ const translations: Translations = {
     'articles.labelArticleIC': 'Leia o artigo completo',
     'articles.labelArticleMD': 'Leia o artigo completo',
     'articles.titlePaperIC': 'Atualizando uma Revisão Sistemática da Literatura sobre Diagnósticos de Gestão do Conhecimento em Organizações de Desenvolvimento de Software',
-    'articles.abstractIC': 'Contexto: No cenário em constante evolução do desenvolvimento de software, as organizações enfrentam o desafio contínuo de lidar com o conhecimento gerado. A Gestão do Conhecimento (GC) pode ser aplicada para gerenciar de forma eficiente o conhecimento em organizações de desenvolvimento de software e garantir a qualidade do produto. No entanto, embora existam diversas abordagens de GC, realizar um diagnóstico de GC nas organizações pode identificar quais atividades de conhecimento apresentam o melhor custo-benefício para a organização. Uma Revisão Sistemática da Literatura (RSL) foi publicada em 2018, apresentando evidências sobre diagnósticos de GC em organizações de desenvolvimento de software. A partir de uma avaliação dessa RSL e do estado atual do tema de pesquisa, observou-se que a RSL de 2018 necessitava de manutenção com uma atualização. Objetivo: Este estudo tem como objetivo atualizar e expandir os resultados produzidos na RSL anterior. Método: Conduzimos a atualização da RSL de 2018 considerando uma nova base de dados, técnicas de snowballing (retroativo e progressivo) e análises adicionais dos dados extraídos. Resultados: Com a atualização da RSL, foram identificados 16 novos estudos sobre diagnósticos de GC no contexto da Engenharia de Software. Conclusão: Na Engenharia de Software, ainda faltam modelos consolidados para aplicação de diagnósticos de GC. Além disso, abordagens computacionais para fornecer suporte automatizado na aplicação e análise de diagnósticos ainda não são amplamente exploradas.',
+    'articles.abstractIC': 'Contexto: No cenário em constante evolução do desenvolvimento de software, as organizações enfrentam o desafio contínuo de lidar com o conhecimento gerado. A Gestão do Conhecimento (GC) pode ser aplicada para gerenciar esse conhecimento de forma eficiente e garantir a qualidade do produto. No entanto, embora existam várias abordagens de GC, realizar um diagnóstico de GC nas organizações permite identificar quais atividades de conhecimento apresentam o melhor custo-benefício. Uma Revisão Sistemática da Literatura (RSL) foi publicada em 2018, apresentando evidências sobre diagnósticos de GC em organizações de desenvolvimento de software. A partir da análise dessa RSL e do estado atual do tema, percebeu-se que a RSL de 2018 necessitava de manutenção com uma atualização. Objetivo: Este estudo visa atualizar e estender os resultados produzidos na RSL anterior. Método: Conduzimos a atualização da RSL de 2018, considerando um novo banco de dados, snowballing para frente e para trás e análises adicionais dos dados extraídos. Resultados: A partir da atualização, 16 novos estudos sobre diagnósticos de GC no contexto da Engenharia de Software foram identificados. Conclusão: Na Engenharia de Software, ainda faltam modelos consolidados para aplicação de diagnósticos de GC. Além disso, abordagens computacionais para fornecer suporte automatizado na aplicação e análise do diagnóstico ainda são pouco exploradas.',
     'articles.titlePaperMD': 'Meninas Digitais UTFPR-CP: Relato de Experiência do Projeto de Extensão',
-    'articles.abstractMD': 'Este relato apresenta as ações promovidas pelo projeto de extensão Meninas Digitais UTFPR-CP. O projeto, criado na Universidade Tecnológica Federal do Paraná, Campus Cornélio Procópio, tem como objetivo aumentar a participação de meninas na computação e nas áreas STEM, incentivando e apoiando alunas do ensino fundamental e médio de escolas públicas das cidades de Cornélio Procópio e região, no interior do Paraná, a conquistarem seu espaço nessas áreas. Para isso, o projeto promove ações como oficinas de programação, mentoria para a competição global Technovation Girls e grupos de discussão, incluindo nessas atividades a resolução de desafios relacionados aos Objetivos de Desenvolvimento Sustentável (ODS).',
+    'articles.abstractMD': 'Este relatório apresenta as ações promovidas pelo projeto de extensão Meninas Digitais UTFPR-CP. O projeto, criado na Universidade Tecnológica Federal do Paraná, campus Cornélio Procópio, tem como objetivo aumentar a participação de meninas na computação e STEM, incentivando e apoiando alunas do ensino fundamental e médio de escolas públicas de Cornélio Procópio e região a conquistarem seu espaço nessas áreas. Para isso, o projeto promove ações como oficinas de programação, mentoria para a competição global Technovation Girls e grupos de discussão, incluindo nestas ações a resolução de desafios dos Objetivos de Desenvolvimento Sustentável (ODS).',
 
     // Rodapé
     'footer.developed': 'Desenvolvido por Daniela Alves.',
     'footer.rights': '2025 | Daniela Alves',
-
-    // Comum
-    'common.loading': 'Carregando...',
-    'common.error': 'Erro ao carregar conteúdo',
-  }
+  },
 };
