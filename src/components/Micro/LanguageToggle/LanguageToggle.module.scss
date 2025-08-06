@@ -1,0 +1,27 @@
+@use "../../../styles/variables" as *;
+
+.languageToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 0 1rem;
+  background: transparent;
+  border: 2px solid $primary;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background: rgba(70, 0, 190, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .flag {
+    font-size: 1rem;
+  }
+  .text {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}

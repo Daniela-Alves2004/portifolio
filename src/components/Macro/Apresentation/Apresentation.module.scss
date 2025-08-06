@@ -1,5 +1,8 @@
 @use "../../../styles/variables" as *;
 
+.containerWrapper{
+    background-color: $secondary;
+}
 .container {
     width: 100%;
     height: 100%;
@@ -95,7 +98,6 @@
         max-width: 50rem;
         padding-top: 3rem ;
     }
-
 }
 
 @media (max-width: 1044px) {
