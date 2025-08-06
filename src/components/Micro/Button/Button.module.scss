@@ -39,7 +39,6 @@
         height: 3rem;
         border: 1px solid $primary;
         background-color: transparent;
-        font-size: 0.8rem;
         border-radius: 1.25rem;
         display: flex;
         align-items: center;
@@ -90,8 +89,7 @@
 
         .btProjects p {
             margin-bottom: 1.7rem;
-            
-            font-size: 1rem;
+            font-size: 0.8rem;
         }
 
         .btProjects img {
@@ -109,10 +107,11 @@
         .btProjects {
             width: 7rem;
             height: 2.5rem;
-            font-size: 0.7rem;
             gap: 0.5rem;
         }
-
+        .btProjects p {
+            font-size: 0.7rem;
+        }
         .btProjects img {
             width: 1.5rem;
         }
@@ -137,7 +136,7 @@
         }
         .btProjects p {
             padding: 0.8rem 0.2rem 0  0; 
-            font-size: 1rem;
+            font-size: 0.7rem;
             text-align: center;
         }
 
